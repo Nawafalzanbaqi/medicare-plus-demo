@@ -66,7 +66,9 @@ export async function loadAllArticles(locale: 'ar' | 'en'): Promise<BlogPostMeta
     const slug = file.replace(/\.mdx$/, '')
     const raw = await fs.readFile(path.join(dir, file), 'utf8')
     const parsed = parseFrontmatter(raw, slug, locale)
-    const { body: _omit, ...meta } = parsed
+    // Strip the heavy `body` field — list view only needs metadata.
+    const { body, ...meta } = parsed
+    void body
     articles.push(meta)
   }
 

@@ -21,20 +21,21 @@ export function LottieIcon({
   loop = true,
   autoplay = true,
 }: Props) {
-  const [data, setData] = useState<unknown>(null)
+  const [loaded, setLoaded] = useState<{ path: string; data: unknown } | null>(
+    null,
+  )
 
   useEffect(() => {
     if (!lottiePath) return
 
     let cancelled = false
-    setData(null)
 
     ;(async () => {
       try {
         const res = await fetch(lottiePath)
         if (!res.ok) return
         const json = await res.json()
-        if (!cancelled) setData(json)
+        if (!cancelled) setLoaded({ path: lottiePath, data: json })
       } catch {
         // Network or parse error — silently fall back to the icon.
       }
@@ -44,6 +45,8 @@ export function LottieIcon({
       cancelled = true
     }
   }, [lottiePath])
+
+  const data = loaded && loaded.path === lottiePath ? loaded.data : null
 
   if (!lottiePath || data === null) {
     return <span className={cn('inline-flex', className)}>{fallbackIcon}</span>

@@ -19,7 +19,10 @@
       "Bash(grep -ci \"departments/cosmetic\\\\|departments/cosmetics\\\\|/api/booking-options\" \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
       "Bash(grep -ci '\"level\":\"ERROR\"' \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
       "Bash(grep -i '\"level\":\"ERROR\"' \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
-      "Bash(grep -rn \"tDeptAll\\\\|allDepartments\\\\.\\\\${\\\\|t.*allDepartments.*name\\\\|t.*featuredDepartments.*name\" src/ --include=\"*.tsx\")"
+      "Bash(grep -rn \"tDeptAll\\\\|allDepartments\\\\.\\\\${\\\\|t.*allDepartments.*name\\\\|t.*featuredDepartments.*name\" src/ --include=\"*.tsx\")",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\NAWAF\\\\Desktop\\\\بروتوفاليو\\\\project\\\\medicare-plus-demo\\\\src\\\\components\" -Recurse -Filter \"*.tsx\")",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

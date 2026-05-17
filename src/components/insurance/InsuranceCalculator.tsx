@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { createElement, useMemo, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion, type Variants } from 'motion/react'
 import { Check, ChevronLeft, ChevronRight, Printer, RotateCcw } from 'lucide-react'
@@ -384,7 +384,6 @@ function Step2Department({
       </h2>
       <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
         {departments.map((d) => {
-          const Icon = pickIcon(d.iconName)
           const isSelected = selected?._id === d._id
           const label = d.name?.[locale] || d.name?.en || d.name?.ar || ''
           return (
@@ -406,11 +405,14 @@ function Step2Department({
                   isSelected ? 'bg-gold/15 ring-1 ring-gold/30' : 'bg-cream ring-1 ring-line',
                 )}
               >
-                <Icon
-                  size={28}
-                  weight="duotone"
-                  className={cn('transition-colors', isSelected ? 'text-gold' : 'text-teal-deep')}
-                />
+                {createElement(pickIcon(d.iconName), {
+                  size: 28,
+                  weight: 'duotone',
+                  className: cn(
+                    'transition-colors',
+                    isSelected ? 'text-gold' : 'text-teal-deep',
+                  ),
+                })}
               </span>
               <span className="text-sm font-semibold text-teal-deep">{label}</span>
             </button>
@@ -459,14 +461,17 @@ function Step3Service({
     () => rulesForDepartment(provider, department._id),
     [provider, department._id],
   )
-  const Icon = pickIcon(department.iconName)
   const deptLabel = department.name?.[locale] || department.name?.en || department.name?.ar || ''
 
   return (
     <div>
       <div className="flex items-center justify-center gap-3">
         <span className="grid h-10 w-10 place-items-center rounded-lg bg-cream ring-1 ring-line">
-          <Icon size={22} weight="duotone" className="text-teal-deep" />
+          {createElement(pickIcon(department.iconName), {
+            size: 22,
+            weight: 'duotone',
+            className: 'text-teal-deep',
+          })}
         </span>
         <h2 className="text-center font-semibold text-teal-deep text-[clamp(1.3rem,2.4vw,1.7rem)]">
           {t('steps.service')} — {deptLabel}

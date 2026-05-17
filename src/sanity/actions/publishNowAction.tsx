@@ -1,3 +1,7 @@
+// Sanity DocumentActionComponent is a hook-like API: Sanity Studio invokes it
+// during a document render pass and it may call hooks. The function name
+// follows Sanity's documented contract, not React's hook naming convention.
+/* eslint-disable react-hooks/rules-of-hooks */
 import { type DocumentActionComponent, useDocumentOperation } from 'sanity'
 import { CheckmarkCircleIcon } from '@sanity/icons'
 import { useState } from 'react'
