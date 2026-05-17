@@ -3,7 +3,11 @@ import { notFound } from 'next/navigation'
 import { hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
-import { BookingFlow, type FlowDepartment } from '@/components/booking/BookingFlow'
+import {
+  BookingWizard,
+  type WizardDepartment,
+  type WizardDoctor,
+} from '@/components/booking/BookingWizard'
 import { sanityFetch } from '@/sanity/lib/client'
 import { canonicalUrl, languageAlternates } from '@/lib/seo'
 
@@ -46,7 +50,7 @@ export async function generateMetadata({
   }
 }
 
-/* Server-side query — mirrors /api/booking-options exactly. */
+/* Server-side query — mirrors /api/booking-options plus doctors. */
 const BOOKING_OPTIONS_QUERY = /* groq */ `
   {
     "departments": *[_type == "department" && (isActive != false)]
@@ -82,20 +86,33 @@ const BOOKING_OPTIONS_QUERY = /* groq */ `
       duration,
       isPopular,
       "departmentSlug": department->slug.current
-    } | order(coalesce(order, 100) asc)
+    } | order(coalesce(order, 100) asc),
+    "doctors": *[_type == "doctor" && (isAvailable != false) && defined(slug.current) && defined(department->slug.current)]
+      | order(coalesce(displayOrder, 100) asc) {
+        _id,
+        "slug": slug.current,
+        name,
+        titlePrefix,
+        specialty,
+        "photoUrl": photo.asset->url,
+        yearsExperience,
+        "departmentId": department->_id,
+        "departmentSlug": department->slug.current
+      }
   }
 `
 
 type ServerResult = {
-  departments: FlowDepartment[] | null
-  servicesBySlug: (FlowDepartment['services'][number] & {
+  departments: WizardDepartment[] | null
+  servicesBySlug: (WizardDepartment['services'][number] & {
     departmentSlug: string
   })[] | null
+  doctors: WizardDoctor[] | null
 }
 
-function mergeFallbackServices(result: ServerResult): FlowDepartment[] {
+function mergeFallbackServices(result: ServerResult): WizardDepartment[] {
   const departments = result.departments ?? []
-  const bySlug = new Map<string, FlowDepartment['services']>()
+  const bySlug = new Map<string, WizardDepartment['services']>()
   for (const row of result.servicesBySlug ?? []) {
     const { departmentSlug, ...service } = row
     if (!bySlug.has(departmentSlug)) bySlug.set(departmentSlug, [])
@@ -123,12 +140,14 @@ export default async function BookPage({
   const result = await sanityFetch<ServerResult>(
     BOOKING_OPTIONS_QUERY,
     {},
-    { tags: ['department', 'service'] },
+    { tags: ['department', 'service', 'doctor'] },
   )
   const departments = result ? mergeFallbackServices(result) : []
+  const doctors = result?.doctors ?? []
 
   const initialDepartmentSlug = sp.department ?? null
   const initialServiceSlug = sp.service ?? null
+  const initialDoctorSlug = sp.doctor ?? null
   const isSupport = sp.support === 'true'
 
   return (
@@ -144,10 +163,12 @@ export default async function BookPage({
         </header>
 
         <div className="rounded-3xl border border-line bg-cream-light p-6 shadow-soft sm:p-10">
-          <BookingFlow
+          <BookingWizard
             departments={departments}
+            doctors={doctors}
             initialDepartmentSlug={initialDepartmentSlug}
             initialServiceSlug={initialServiceSlug}
+            initialDoctorSlug={initialDoctorSlug}
             isSupport={isSupport}
           />
         </div>

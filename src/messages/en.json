@@ -71,6 +71,56 @@
       "phoneLabel": "Phone"
     }
   },
+  "bookingWizard": {
+    "progress": "Step {current} of {total}",
+    "back": "Back",
+    "nextStep2": "Next — Select Doctor",
+    "nextStep3": "Next — Your Details",
+    "errors": {
+      "step1": "Please select a department and a service before continuing",
+      "step2": "Please select a doctor and a time before continuing",
+      "name": "Please enter your full name",
+      "phone": "Invalid phone — use a Saudi format (+9665XXXXXXXX or 05XXXXXXXX)",
+      "email": "Invalid email format"
+    },
+    "step1": {
+      "title": "Select Department & Service",
+      "description": "Pick the department you'd like to visit, then the service that fits.",
+      "departmentLabel": "1. Choose a department",
+      "serviceLabel": "2. Choose a service",
+      "servicesEmpty": "No services are published under this department yet — try another or contact us.",
+      "errorDepartment": "Please select a department first",
+      "errorService": "Please pick a service to continue"
+    },
+    "step2": {
+      "title": "Select Doctor & Time",
+      "description": "Choose a doctor in {department} and the time that works best for you.",
+      "doctorLabel": "Doctor",
+      "timeLabel": "Available time",
+      "doctorsEmpty": "No doctors available in this department right now — contact us to confirm your visit.",
+      "yearsExperience": "{count} yrs experience",
+      "errorDoctor": "Please select a doctor",
+      "errorSlot": "Please pick a time slot"
+    },
+    "step3": {
+      "title": "Your Details",
+      "description": "These details are sent to our team via WhatsApp to confirm your booking.",
+      "nameLabel": "Full name",
+      "namePlaceholder": "e.g. Ahmed Mohammed",
+      "phoneLabel": "Phone number",
+      "phonePlaceholder": "+966501234567",
+      "phoneHint": "Saudi format: +9665XXXXXXXX or 05XXXXXXXX",
+      "emailLabel": "Email (optional)",
+      "emailPlaceholder": "you@example.com",
+      "emailHint": "We email you only when needed.",
+      "submit": "Complete Booking via WhatsApp",
+      "sending": "Opening WhatsApp…",
+      "disclaimer": "Tapping the button opens WhatsApp with a pre-filled message containing your booking details.",
+      "errorName": "Please enter your name (at least 2 characters)",
+      "errorPhone": "Invalid phone — use a Saudi format",
+      "errorEmail": "Invalid email format"
+    }
+  },
   "bookingFlow": {
     "metaTitle": "Book Your Appointment — MediCare Plus",
     "metaDescription": "Book your appointment at MediCare Plus in 3 quick steps via WhatsApp.",
@@ -595,5 +645,22 @@
     "contactUs": "Contact Us",
     "address": "Riyadh - Al-Olaya District",
     "rights": "© 2026 MediCare Plus — All rights reserved"
+  },
+  "notFound": {
+    "metaTitle": "Page Not Found",
+    "metaDescription": "The page you are looking for is unavailable. Return to the homepage or browse our departments.",
+    "eyebrow": "Error 404",
+    "code": "Error 404",
+    "title": "Page Not Found",
+    "description": "It looks like you've reached a page that doesn't exist. The link may be outdated or the content has moved.",
+    "backHome": "Back to Home",
+    "contact": "Contact Us",
+    "popular": {
+      "heading": "You might be looking for",
+      "departments": "Medical Departments",
+      "doctors": "Our Doctors",
+      "blog": "Health Blog"
+    },
+    "helper": "If you think this is a mistake on our side, we're happy to help via WhatsApp."
   }
 }

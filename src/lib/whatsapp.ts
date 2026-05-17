@@ -41,8 +41,11 @@ export type WhatsAppContextRich = {
     currency?: string | null
   } | null
   timePreference?: TimePreference | null
+  /** Explicit appointment time chosen in the wizard (e.g. "10:00"). */
+  timeSlot?: string | null
   customerName?: string | null
   customerPhone?: string | null
+  customerEmail?: string | null
   notes?: string | null
   supportType?: string | null
 }
@@ -77,8 +80,10 @@ const LABELS: Record<Locale, Record<string, string>> = {
     offerPrice: '💰 سعر العرض',
     originalPrice: 'بدلاً من',
     timePreference: '⏰ الوقت المفضّل',
+    timeSlot: '⏰ موعد الزيارة',
     name: '👤 الاسم',
     phone: '📱 الجوال',
+    email: '✉️ البريد الإلكتروني',
     notesHeader: '📝 ملاحظات إضافية:',
     questionHeader: 'سؤالي:',
     supportType: 'نوع الدعم',
@@ -108,8 +113,10 @@ const LABELS: Record<Locale, Record<string, string>> = {
     offerPrice: '💰 Offer price',
     originalPrice: 'instead of',
     timePreference: '⏰ Preferred time',
+    timeSlot: '⏰ Appointment time',
     name: '👤 Name',
     phone: '📱 Phone',
+    email: '✉️ Email',
     notesHeader: '📝 Additional notes:',
     questionHeader: 'My question:',
     supportType: 'Support type',
@@ -148,7 +155,15 @@ function buildBookingMessage(ctx: WhatsAppContextRich): string {
   if (typeof ctx.service?.price === 'number') {
     lines.push(`${L.price}: ${ctx.service.price} ${L.currency}`)
   }
-  if (ctx.timePreference) {
+  if (ctx.doctor?.name) {
+    lines.push(`${L.doctor}: ${ctx.doctor.name}`)
+  }
+  if (ctx.doctor?.specialty) {
+    lines.push(`${L.specialty}: ${ctx.doctor.specialty}`)
+  }
+  if (ctx.timeSlot?.trim()) {
+    lines.push(`${L.timeSlot}: ${ctx.timeSlot.trim()}`)
+  } else if (ctx.timePreference) {
     lines.push(`${L.timePreference}: ${timeLabel(ctx.locale, ctx.timePreference)}`)
   }
   if (ctx.customerName?.trim()) {
@@ -156,6 +171,9 @@ function buildBookingMessage(ctx: WhatsAppContextRich): string {
   }
   if (ctx.customerPhone?.trim()) {
     lines.push(`${L.phone}: ${ctx.customerPhone.trim()}`)
+  }
+  if (ctx.customerEmail?.trim()) {
+    lines.push(`${L.email}: ${ctx.customerEmail.trim()}`)
   }
   if (ctx.notes?.trim()) {
     lines.push(L.notesHeader)

@@ -1,7 +1,25 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(& \"C:\\\\Users\\\\alzan\\\\Desktop\\\\مركز ميديكير بلس الطبي\\\\medicare-plus-demo\\\\.sanitize.ps1\")"
+      "PowerShell(& \"C:\\\\Users\\\\alzan\\\\Desktop\\\\مركز ميديكير بلس الطبي\\\\medicare-plus-demo\\\\.sanitize.ps1\")",
+      "Skill(medicare-plus)",
+      "Bash(npx tsx *)",
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(curl *)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(npx eslint *)",
+      "Bash(grep -q \"Ready in\\\\|Local:\\\\|compiled\\\\|Error\\\\|error\" \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-NAWAF-Desktop------------project-medicare-plus-demo\\\\\\\\8e666f1b-e70a-4d4d-ace2-52de17930224\\\\\\\\tasks\\\\\\\\bnqo2gh2m.output\")",
+      "Bash(head -50 \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-NAWAF-Desktop------------project-medicare-plus-demo\\\\\\\\8e666f1b-e70a-4d4d-ace2-52de17930224\\\\\\\\tasks\\\\\\\\bnqo2gh2m.output\")",
+      "Bash(grep -ic \"QuickBooking\\\\|qbb-\\\\|aria-label=\\\\\"احجز الآن\\\\\\\\|aria-label=\\\\\"Open\\\\\\\\|WhatsApp\\\\|25D366\" dept_cos.html)",
+      "Bash(grep -ic \"QuickBooking\\\\|qbb-\\\\|aria-label=\\\\\"احجز الآن\\\\\\\\|aria-label=\\\\\"Open\\\\\\\\|WhatsApp\\\\|25D366\" dept_list.html)",
+      "Bash(tail -100 \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
+      "Bash(grep -i \"QuickBooking\\\\|qbb\\\\|api/booking-options\" \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
+      "Bash(grep -ci \"departments/cosmetic\\\\|departments/cosmetics\\\\|/api/booking-options\" \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
+      "Bash(grep -ci '\"level\":\"ERROR\"' \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
+      "Bash(grep -i '\"level\":\"ERROR\"' \"C:\\\\\\\\Users\\\\\\\\NAWAF\\\\\\\\Desktop\\\\\\\\بروتوفاليو\\\\\\\\project\\\\\\\\medicare-plus-demo\\\\\\\\.next\\\\\\\\dev\\\\\\\\logs\\\\\\\\next-development.log\")",
+      "Bash(grep -rn \"tDeptAll\\\\|allDepartments\\\\.\\\\${\\\\|t.*allDepartments.*name\\\\|t.*featuredDepartments.*name\" src/ --include=\"*.tsx\")"
     ]
   }
 }

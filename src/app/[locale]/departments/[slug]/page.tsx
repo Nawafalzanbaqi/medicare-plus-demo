@@ -34,7 +34,7 @@ import { EmptyState } from '@/components/shared/EmptyState'
 import { JsonLd } from '@/components/shared/JsonLd'
 import { canonicalUrl, languageAlternates, SITE_URL } from '@/lib/seo'
 import { getWhatsAppUrl } from '@/lib/whatsapp'
-import { getDepartmentBySlug } from '@/sanity/lib/queries'
+import { getAllDepartmentSlugs, getDepartmentBySlug } from '@/sanity/lib/queries'
 import { urlForImage } from '@/sanity/lib/image'
 import type {
   DoctorDoc,
@@ -50,12 +50,17 @@ function isFeatured(slug: string): slug is FeaturedSlug {
   return (FEATURED_SLUGS as string[]).includes(slug)
 }
 
-function isValidSlug(slug: string): slug is DepartmentSlug {
+function isKnownSlug(slug: string): slug is DepartmentSlug {
   return ALL_DEPARTMENTS.some((d) => d.slug === slug)
 }
 
-export function generateStaticParams() {
-  return ALL_DEPARTMENTS.map((d) => ({ slug: d.slug }))
+export async function generateStaticParams() {
+  const cmsSlugs = (await getAllDepartmentSlugs()) ?? []
+  const merged = new Set<string>([
+    ...ALL_DEPARTMENTS.map((d) => d.slug),
+    ...cmsSlugs.filter((s): s is string => !!s),
+  ])
+  return Array.from(merged).map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({
@@ -65,19 +70,31 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params
 
-  if (!hasLocale(routing.locales, locale) || !isValidSlug(slug)) {
-    return {}
-  }
+  if (!hasLocale(routing.locales, locale)) return {}
+
+  const cmsDept = await getDepartmentBySlug(slug)
+  if (!cmsDept && !isKnownSlug(slug)) return {}
 
   const t = await getTranslations({ locale })
+  const loc = locale as Locale
 
-  const name = isFeatured(slug)
-    ? t(`featuredDepartments.${slug}.name`)
-    : t(`allDepartments.${slug}.name`)
+  const fallbackName = isKnownSlug(slug)
+    ? isFeatured(slug)
+      ? t(`featuredDepartments.${slug}.name`)
+      : t(`allDepartments.${slug}.name`)
+    : slug
 
-  const description = isFeatured(slug)
-    ? t(`departments.${slug}.heroDescription`)
-    : t(`allDepartments.${slug}.description`)
+  const fallbackDescription = isKnownSlug(slug)
+    ? isFeatured(slug)
+      ? t(`departments.${slug}.heroDescription`)
+      : t(`allDepartments.${slug}.description`)
+    : ''
+
+  const name = cmsDept?.name?.[loc] || cmsDept?.name?.[loc === 'ar' ? 'en' : 'ar'] || fallbackName
+  const description =
+    cmsDept?.shortDescription?.[loc] ||
+    cmsDept?.shortDescription?.[loc === 'ar' ? 'en' : 'ar'] ||
+    fallbackDescription
 
   const path = `/departments/${slug}`
   const url = canonicalUrl(locale, path)
@@ -134,7 +151,7 @@ function mapCmsService(s: ServiceDoc, locale: Locale): ServiceItem {
   }
 }
 
-function mapCmsDoctor(d: DoctorDoc, deptSlug: DepartmentSlug): Doctor {
+function mapCmsDoctor(d: DoctorDoc, deptSlug: string): Doctor {
   const photoUrl = urlForImage(d.photo)?.width(600).url() || ''
   return {
     id: d._id,
@@ -150,7 +167,7 @@ function mapCmsDoctor(d: DoctorDoc, deptSlug: DepartmentSlug): Doctor {
     },
     yearsExperience: d.yearsExperience ?? 0,
     photo: photoUrl,
-    department: deptSlug,
+    department: deptSlug as DepartmentSlug,
     gender: (d.gender ?? 'male') as DoctorGender,
     nationality: (d.nationality ?? 'sa') as DoctorNationality,
     languages: (d.languages ?? ['ar', 'en']) as DoctorLanguage[],
@@ -165,7 +182,6 @@ export default async function DepartmentPage({
   const { locale, slug } = await params
 
   if (!hasLocale(routing.locales, locale)) notFound()
-  if (!isValidSlug(slug)) notFound()
 
   setRequestLocale(locale)
 
@@ -175,24 +191,35 @@ export default async function DepartmentPage({
   // ---------- CMS overlay (returns null when Sanity isn't configured) ----------
   const cmsDept = await getDepartmentBySlug(slug)
 
+  // Only 404 if neither CMS nor the hardcoded fallback knows this slug.
+  if (!cmsDept && !isKnownSlug(slug)) notFound()
+
   // Resolve hero strings + image
-  const name =
-    cmsDept?.name?.[loc] ||
-    (isFeatured(slug)
+  const fallbackName = isKnownSlug(slug)
+    ? isFeatured(slug)
       ? t(`featuredDepartments.${slug}.name`)
-      : t(`allDepartments.${slug}.name`))
+      : t(`allDepartments.${slug}.name`)
+    : slug
 
-  const tagline =
-    cmsDept?.tagline?.[loc] ||
-    (isFeatured(slug)
+  const fallbackTagline = isKnownSlug(slug)
+    ? isFeatured(slug)
       ? t(`featuredDepartments.${slug}.tagline`)
-      : t(`allDepartments.${slug}.description`))
+      : t(`allDepartments.${slug}.description`)
+    : ''
 
+  const fallbackDescription = isKnownSlug(slug)
+    ? isFeatured(slug)
+      ? t(`departments.${slug}.heroDescription`)
+      : t(`allDepartments.${slug}.description`)
+    : ''
+
+  const name = cmsDept?.name?.[loc] || cmsDept?.name?.[loc === 'ar' ? 'en' : 'ar'] || fallbackName
+  const tagline =
+    cmsDept?.tagline?.[loc] || cmsDept?.tagline?.[loc === 'ar' ? 'en' : 'ar'] || fallbackTagline
   const description =
     cmsDept?.shortDescription?.[loc] ||
-    (isFeatured(slug)
-      ? t(`departments.${slug}.heroDescription`)
-      : t(`allDepartments.${slug}.description`))
+    cmsDept?.shortDescription?.[loc === 'ar' ? 'en' : 'ar'] ||
+    fallbackDescription
 
   const heroImage = urlForImage(cmsDept?.heroImage)?.width(1200).url() ?? null
 

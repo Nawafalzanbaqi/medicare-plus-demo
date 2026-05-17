@@ -119,11 +119,17 @@ export function DoctorsDirectory({ doctors }: Props) {
   }, [filters, pathname, router])
 
   const deptLabel = useCallback(
-    (slug: DepartmentSlug) =>
-      (FEATURED as string[]).includes(slug)
-        ? tDeptFeatured(`${slug}.name`)
-        : tDeptAll(`${slug}.name`),
-    [tDeptAll, tDeptFeatured],
+    (slug: DepartmentSlug) => {
+      if ((FEATURED as string[]).includes(slug))
+        return tDeptFeatured(`${slug}.name`)
+      // Unknown slugs (e.g. CMS data that introduces new departments before the
+      // translation file catches up) fall back to a humanised version of the
+      // slug instead of throwing MISSING_MESSAGE.
+      if (!validSlugs.has(slug))
+        return slug.charAt(0).toUpperCase() + slug.slice(1)
+      return tDeptAll(`${slug}.name`)
+    },
+    [tDeptAll, tDeptFeatured, validSlugs],
   )
 
   // Filtering
