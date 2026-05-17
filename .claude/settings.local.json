@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\Users\\\\alzan\\\\Desktop\\\\مركز ميديكير بلس الطبي\\\\medicare-plus-demo\\\\.sanitize.ps1\")"
+    ]
+  }
+}

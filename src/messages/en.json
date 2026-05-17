@@ -1,0 +1,599 @@
+{
+  "common": {
+    "bookAppointment": "Book Appointment",
+    "bookNow": "Book Appointment Now",
+    "learnMore": "Learn More",
+    "callUs": "Call Us",
+    "whatsapp": "Book via WhatsApp",
+    "exploreDepartment": "Explore Department",
+    "browseDepartments": "Browse Departments",
+    "whatsappMessage": "Hello, I'd like to ask about MediCare Plus services.",
+    "switchLanguage": "العربية",
+    "switchLanguageAria": "Switch to Arabic"
+  },
+  "nav": {
+    "home": "Home",
+    "departments": "Departments",
+    "doctors": "Doctors",
+    "insurance": "Insurance",
+    "blog": "Blog",
+    "about": "About",
+    "offers": "Offers",
+    "contact": "Contact",
+    "brandName": "MediCare Plus",
+    "tagline": "Since 2010",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "topBar": {
+    "hours": "Open Today: 9 AM - 11 PM"
+  },
+  "trustBar": {
+    "ariaLabel": "Trust bar",
+    "defaults": {
+      "rating": "Rated 4.8 from 1,234 patients",
+      "certified": "Ministry of Health Certified",
+      "insurance": "12 Insurance Networks",
+      "hours": "Open Sat – Thu",
+      "experience": "15 Years of Expertise"
+    }
+  },
+  "quickBooking": {
+    "cta": "Book Appointment",
+    "openLabel": "Open quick booking",
+    "title": "Quick Booking",
+    "close": "Close",
+    "departmentLabel": "Choose Department",
+    "departmentPlaceholder": "Select a department",
+    "serviceLabel": "Choose Service",
+    "servicePlaceholder": "Select a service",
+    "noServices": "No services in this department — contact us for details",
+    "noServicesHelp": "Reach out for available services in this department",
+    "fullFormLink": "Or book via the full form",
+    "timeLabel": "Preferred Time",
+    "slots": {
+      "morning": "Morning",
+      "evening": "Evening",
+      "any": "Any time"
+    },
+    "contactToggle": "Add your details (optional)",
+    "namePlaceholder": "Name",
+    "phonePlaceholder": "Phone",
+    "submit": "Book via WhatsApp",
+    "sending": "Opening…",
+    "dismiss": "Don't show again",
+    "whatsapp": {
+      "greeting": "Hello, I would like to book an appointment at MediCare Plus",
+      "departmentLabel": "Department",
+      "serviceLabel": "Service",
+      "timeLabel": "Preferred time",
+      "nameLabel": "Name",
+      "phoneLabel": "Phone"
+    }
+  },
+  "bookingFlow": {
+    "metaTitle": "Book Your Appointment — MediCare Plus",
+    "metaDescription": "Book your appointment at MediCare Plus in 3 quick steps via WhatsApp.",
+    "title": "Book Your Appointment",
+    "subtitle": "Complete the three quick steps and we'll send your booking details directly via WhatsApp.",
+    "progress": "Step {current} of {total}",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Book Now via WhatsApp",
+    "sending": "Opening…",
+    "step1": {
+      "title": "Choose a Department",
+      "description": "Start by selecting the department you'd like to book in."
+    },
+    "step2": {
+      "title": "Choose a Service",
+      "description": "Pick the service you'd like to book within this department.",
+      "selectButton": "Select",
+      "empty": "No services are published for this department yet — tap Next to continue via WhatsApp.",
+      "skipNote": "Or reach out to us directly"
+    },
+    "step3": {
+      "title": "Time Preference & Your Info",
+      "description": "Tell us your preferred time and contact details (optional)."
+    },
+    "timePreference": {
+      "label": "Preferred time",
+      "morning": "Morning",
+      "evening": "Evening",
+      "any": "Any time"
+    },
+    "fields": {
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "phone": "Phone number",
+      "phonePlaceholder": "5XXXXXXXX",
+      "notes": "Additional notes",
+      "notesPlaceholder": "Anything you'd like us to know before the appointment?"
+    },
+    "summary": {
+      "department": "Department",
+      "service": "Service"
+    },
+    "support": {
+      "title": "How can we help?",
+      "description": "Tell us what kind of support you need and we'll reach out directly.",
+      "typeLabel": "Support type",
+      "submit": "Contact via WhatsApp"
+    }
+  },
+  "hero": {
+    "badge": "15 Years Serving Riyadh",
+    "title": "Comprehensive Medical Care with a <em>Refined</em> Touch and Lasting Expertise",
+    "description": "From Cosmetic and Surgery to Audiology and dozens of other specialties — we provide comprehensive healthcare with international standards under the supervision of elite doctors and consultants.",
+    "stats": {
+      "years": "Years of Experience",
+      "departments": "Specialized Departments",
+      "doctors": "Doctors & Consultants",
+      "rating": "Patient Rating"
+    },
+    "floatingCard": {
+      "title": "Unique Specialties in Riyadh",
+      "description": "Audiology, advanced surgery, and non-surgical cosmetics — all under one roof.",
+      "tag": "New for 2026"
+    },
+    "testimonialCard": {
+      "name": "Nouf Al-Otaibi",
+      "comment": "A refined experience with a medical team of the highest professionalism.",
+      "ariaRating": "Rated 5 out of 5"
+    },
+    "patientsCard": {
+      "value": "+10,000",
+      "label": "Patients Yearly"
+    }
+  },
+  "featuredDepartments": {
+    "eyebrow": "Our Featured Departments",
+    "title": "Specialties That Set Us Apart",
+    "description": "Three core departments reflecting MediCare's growth and evolution — with the latest equipment and most skilled professionals.",
+    "cosmetic": {
+      "name": "Cosmetic Department",
+      "tagline": "Natural Results from 15 Years of Expertise",
+      "description": "Non-surgical cosmetic treatments with the latest technologies — fillers, botox, laser, and advanced skin treatments under certified consultants.",
+      "services": [
+        "Filler & Botox treatments",
+        "Laser hair removal and skin brightening",
+        "Skin revitalization and tightening",
+        "Deep skin cleansing"
+      ]
+    },
+    "surgery": {
+      "name": "Surgery Department",
+      "tagline": "Precision Procedures by an Experienced Surgical Team",
+      "description": "A complete surgical unit with state-of-the-art operating rooms and the most skilled certified surgeons — general, cosmetic, and precision surgery.",
+      "services": [
+        "General and cosmetic surgery",
+        "Fully equipped operating rooms",
+        "Post-operative care",
+        "Most insurance networks accepted"
+      ]
+    },
+    "audiology": {
+      "name": "Audiology Department",
+      "tagline": "Hearing Health Specialists in Riyadh",
+      "description": "Accurate diagnosis of hearing disorders, hearing aid fitting and tuning with the latest global technologies — for all ages.",
+      "services": [
+        "Comprehensive hearing tests",
+        "Hearing aid fitting and tuning",
+        "Consultations for seniors and children",
+        "Maintenance and regular follow-up"
+      ]
+    }
+  },
+  "trustBadges": {
+    "eyebrow": "Trusted By",
+    "logos": {
+      "ministry": { "name": "Ministry of Health", "subtitle": "MOH" },
+      "vision": { "name": "Vision 2030", "subtitle": "Vision" },
+      "bupa": { "name": "Bupa", "subtitle": "Insurance" },
+      "tawuniya": { "name": "Tawuniya", "subtitle": "Insurance" },
+      "jci": { "name": "Joint Commission Int'l", "subtitle": "JCI" }
+    }
+  },
+  "offers": {
+    "title": "Current Offers",
+    "subtitle": "Hand-picked medical experiences at limited-time pricing.",
+    "empty": "No active offers right now — reach us on WhatsApp for current packages.",
+    "discountLabel": "{percent}% off",
+    "originalPriceLabel": "Original price",
+    "offerPriceLabel": "Offer price",
+    "validUntilLabel": "Valid until",
+    "bookNow": "Book now",
+    "whatsappTemplate": "Hello, I'd like to take advantage of the offer: {title} ({price} {currency})."
+  },
+  "blog": {
+    "title": "Medical Tips from MediCare Experts",
+    "subtitle": "Curated articles by our specialists answering the questions we hear most.",
+    "allCategories": "All",
+    "filterBy": "Filter by department",
+    "categories": {
+      "audiology": "Audiology",
+      "cosmetic": "Cosmetic",
+      "dental": "Dental",
+      "surgery": "Surgery"
+    },
+    "minutes": "min read",
+    "by": "By",
+    "publishedOn": "Published on",
+    "empty": "No articles in this category yet.",
+    "shareWhatsApp": "Share on WhatsApp",
+    "bookConsultation": "Book a consultation in this department",
+    "relatedArticles": "You might also like",
+    "breadcrumbBlog": "Blog",
+    "backToBlog": "All articles",
+    "shareTemplate": "I read a useful medical article from MediCare Plus: {title} — {url}"
+  },
+  "insurance": {
+    "title": "Insurance Coverage Calculator",
+    "subtitle": "Get an estimated coverage percentage for your service in four quick steps.",
+    "stepLabel": "Step {current} of {total}",
+    "steps": {
+      "provider": "Choose your insurer",
+      "category": "Choose a department",
+      "service": "Choose a service",
+      "result": "Estimated coverage"
+    },
+    "next": "Next",
+    "back": "Back",
+    "startOver": "Start over",
+    "selectService": "Select a service",
+    "empty": "No insurance providers are available right now. Please check back later or contact us to confirm.",
+    "noDepartments": "No covered departments are configured for this insurer yet.",
+    "categories": {
+      "cosmetic": "Cosmetic",
+      "dental": "Dental",
+      "audiology": "Audiology",
+      "surgery": "Surgery",
+      "internal": "Internal Medicine",
+      "pediatrics": "Pediatrics",
+      "gynecology": "Gynecology",
+      "ophthalmology": "Ophthalmology"
+    },
+    "result": {
+      "coverageLabel": "Estimated coverage",
+      "providerLabel": "Insurer",
+      "serviceLabel": "Service",
+      "categoryLabel": "Department",
+      "notCovered": "This service is typically not covered — ask us about discounted cash packages.",
+      "requiresApproval": "Pre-approval required from the insurer",
+      "disclaimer": "* Percentages are estimates based on general data. To confirm, contact the complex.",
+      "cta": "Contact to confirm coverage",
+      "print": "Print"
+    },
+    "whatsappTemplate": "Hello, I'd like to confirm {provider} insurance coverage for: {service} in the {category} department. Estimated coverage {coverage}%."
+  },
+  "doctors": {
+    "title": "Our Doctors",
+    "subtitle": "Meet our medical team — consultants and specialists pairing experience with expertise.",
+    "searchPlaceholder": "Search by name…",
+    "filters": {
+      "department": "Department",
+      "gender": "Gender",
+      "language": "Language",
+      "nationality": "Nationality",
+      "all": "All",
+      "male": "Male",
+      "female": "Female",
+      "selectedCount": "{count} selected",
+      "reset": "Reset",
+      "languages": {
+        "ar": "Arabic",
+        "en": "English",
+        "fr": "French",
+        "ur": "Urdu"
+      },
+      "nationalities": {
+        "sa": "Saudi",
+        "eg": "Egyptian",
+        "jo": "Jordanian",
+        "sd": "Sudanese",
+        "in": "Indian",
+        "pk": "Pakistani"
+      }
+    },
+    "showing": "Showing {count} of {total} doctors",
+    "empty": {
+      "title": "No doctor matches your criteria",
+      "description": "Try widening the filters, or reset to start over."
+    },
+    "card": {
+      "yearsExperience": "Years experience",
+      "book": "Book",
+      "genderLabel": "Gender",
+      "nationalityLabel": "Nationality",
+      "languagesLabel": "Languages"
+    }
+  },
+  "trustStrip": {
+    "quickBooking": { "title": "Quick Booking", "description": "Less than a minute via WhatsApp" },
+    "equipment": { "title": "Latest Equipment", "description": "Internationally certified medical technologies" },
+    "staff": { "title": "Specialized Staff", "description": "Certified consultants and specialists" },
+    "insurance": { "title": "Insurance Networks", "description": "Most insurance companies accepted" }
+  },
+  "allDepartments": {
+    "eyebrow": "All Departments",
+    "title": "Other Specialties at Your Service",
+    "dental": { "name": "Dental", "description": "Cleaning, orthodontics, prosthetics" },
+    "internal": { "name": "Internal Medicine", "description": "Comprehensive diagnosis and treatment" },
+    "pediatrics": { "name": "Pediatrics", "description": "Growth monitoring and vaccinations" },
+    "gynecology": { "name": "Gynecology & Obstetrics", "description": "Integrated women's health care" },
+    "orthopedics": { "name": "Orthopedics", "description": "Injuries and joints" },
+    "ophthalmology": { "name": "Ophthalmology", "description": "Exams, glasses, treatment" },
+    "lab": { "name": "Laboratory", "description": "Comprehensive accurate analyses" },
+    "radiology": { "name": "Radiology", "description": "Modern diagnostic imaging" }
+  },
+  "departmentsList": {
+    "metaTitle": "Medical Departments | MediCare Plus",
+    "metaDescription": "Explore MediCare Plus's departments in Riyadh — Cosmetic, Surgery, Audiology, Dental, Internal Medicine, Pediatrics, Ophthalmology and more, led by certified consultants since 2010.",
+    "hero": {
+      "eyebrow": "Our Departments",
+      "title": "Comprehensive Specialties Under One Roof",
+      "description": "From non-surgical aesthetics to audiology and precision surgery — MediCare Plus delivers complete care for every member of the family, with certified consultants and world-class equipment, for over three decades."
+    },
+    "featured": {
+      "title": "Featured Departments"
+    },
+    "allDepartments": {
+      "title": "All Specialties"
+    },
+    "cta": {
+      "title": "Can't find what you're looking for? Contact us",
+      "description": "Our patient-care team is ready to answer your questions and guide you to the right department — within minutes via WhatsApp.",
+      "button": "Chat on WhatsApp"
+    }
+  },
+  "departments": {
+    "common": {
+      "breadcrumbHome": "Home",
+      "breadcrumbDepartments": "Departments",
+      "bookConsultation": "Book Consultation",
+      "servicesEyebrow": "Our Services",
+      "servicesHeading": "Our Services in This Department",
+      "servicesSubheading": "Integrated medical solutions aligned with the latest standards",
+      "moreServicesSoon": "More services coming soon",
+      "teamHeading": "Elite Doctors",
+      "teamSubheading": "Consultants and specialists pairing experience with expertise",
+      "yearsExperience": "Years Experience",
+      "bookWithDoctor": "Book with Doctor",
+      "bookThisService": "Book This Service",
+      "bookThisOffer": "Book This Offer",
+      "faqHeading": "Frequently Asked Questions",
+      "faqSubheading": "Quick answers to what matters most before your visit",
+      "popular": "Popular",
+      "currency": "SAR",
+      "gallery": {
+        "heading": "Before & After",
+        "subheading": "Real results from patients who chose MediCare's cosmetic team",
+        "before": "Before",
+        "after": "After"
+      },
+      "equipment": {
+        "heading": "Our Equipment & Technologies",
+        "subheading": "Certified international tools that ensure precision and safety"
+      },
+      "learnMore": "Learn More",
+      "comingSoon": "Detailed content for this department is coming soon — we're happy to consult with you on WhatsApp now.",
+      "empty": {
+        "servicesTitle": "Services are being updated",
+        "servicesDescription": "Contact us to inquire about currently available services.",
+        "doctorsTitle": "Doctor lineup is being updated",
+        "doctorsDescription": "Contact us to learn about the doctors available in this department.",
+        "galleryTitle": "Results gallery is coming soon",
+        "galleryDescription": "We share real result photos only with patient consent.",
+        "equipmentTitle": "Equipment details are being updated",
+        "equipmentDescription": "We're working on adding the full equipment list.",
+        "faqTitle": "FAQs are being prepared",
+        "faqDescription": "For any question, we'd love to help on WhatsApp.",
+        "contactCta": "Contact on WhatsApp"
+      }
+    },
+    "cosmetic": {
+      "heroDescription": "Non-surgical cosmetic care with the latest technologies under certified consultants — natural results and a refined experience every visit.",
+      "detailedServices": [
+        { "iconName": "syringe", "name": "Filler & Botox Injections", "description": "Precise injections to soften lines, contour the face, and enhance lip shape with natural results." },
+        { "iconName": "sparkle", "name": "Laser Hair Removal", "description": "Certified laser systems suitable for all skin types, with quick, safe sessions." },
+        { "iconName": "drop", "name": "Skin Brightening & Glow", "description": "Targeted protocols to even out skin tone using medically certified actives." },
+        { "iconName": "hand-soap", "name": "Deep Cleansing & HydraFacial", "description": "Deep-cleansing sessions that restore radiance and stimulate skin renewal." },
+        { "iconName": "leaf", "name": "Acne Treatment", "description": "Comprehensive plans for active acne and post-acne marks led by a consultant." },
+        { "iconName": "lightning", "name": "Non-Surgical Body Sculpting", "description": "Fat-reduction and skin-tightening technologies — no surgery, no downtime." }
+      ],
+      "faq": [
+        { "question": "Are filler and Botox results safe and natural?", "answer": "We use FDA-approved products injected by consultants, with a strong focus on results that complement your natural features." },
+        { "question": "How long is a laser session?", "answer": "Sessions range from 15 to 45 minutes depending on the area, and usually require no downtime." },
+        { "question": "When do skin-care results show?", "answer": "Initial results appear after the first session and continue to improve over 2–4 weeks." },
+        { "question": "Do you offer free initial consultations?", "answer": "Yes — your first skin-assessment consultation is complimentary with a booked appointment." },
+        { "question": "How can I book quickly?", "answer": "The fastest way is via WhatsApp — our team responds within minutes and finds the time that suits you." }
+      ],
+      "gallery": [],
+      "realResults": {
+        "title": "Real Results",
+        "subtitle": "Actual photos from MediCare patients (with their consent)",
+        "disclaimer": "Results vary from person to person — photos shared with patient consent",
+        "treatments": [
+          { "name": "Lip Filler", "duration": "Single session" },
+          { "name": "Forehead Botox", "duration": "15 minutes" },
+          { "name": "Skin Brightening Laser", "duration": "4 sessions" }
+        ]
+      }
+    },
+    "surgery": {
+      "heroDescription": "A complete surgical unit with state-of-the-art operating rooms and certified surgeons — general, cosmetic, and precision surgery with trusted outcomes.",
+      "detailedServices": [
+        { "iconName": "first-aid", "name": "General Surgery", "description": "Abdominal, hernia, colon, and vascular procedures performed by consultants." },
+        { "iconName": "scissors", "name": "Plastic Surgery", "description": "Rhinoplasty, liposuction, and breast procedures with harmonious results." },
+        { "iconName": "bone", "name": "Orthopedic Surgery", "description": "Fracture care, fixation, and joint replacement using the latest techniques." },
+        { "iconName": "heart", "name": "Post-Op Care Unit", "description": "Fully equipped recovery suites monitored by our medical team 24/7." },
+        { "iconName": "shield-check", "name": "Wide Insurance Coverage", "description": "We accept most major insurance networks with a dedicated approval team." },
+        { "iconName": "calendar-check", "name": "Pre-Op Evaluation", "description": "Comprehensive testing and anesthesia consult before scheduling the procedure." }
+      ],
+      "faq": [
+        { "question": "How is the right surgery determined?", "answer": "It starts with a surgeon consultation, review of your medical history, and tests before proposing the most suitable surgical plan." },
+        { "question": "Are the operating rooms built to international standards?", "answer": "Yes, our ORs follow global sterilization and monitoring protocols and use state-of-the-art equipment." },
+        { "question": "How long is recovery, typically?", "answer": "It depends on the procedure; you'll receive a clear recovery schedule with follow-up appointments." },
+        { "question": "Do you accept medical insurance?", "answer": "We accept most major insurance networks, and our team handles the approval process with your provider." },
+        { "question": "What should I do before surgery?", "answer": "You'll receive a complete preparation guide covering fasting, medications, and home preparations." }
+      ],
+      "equipment": []
+    },
+    "audiology": {
+      "heroDescription": "Accurate diagnosis of hearing disorders, hearing-aid fitting and tuning with the latest global technologies — for all ages.",
+      "detailedServices": [
+        { "iconName": "ear", "name": "Comprehensive Hearing Tests", "description": "Detailed hearing assessment for all ages using the latest measurement systems." },
+        { "iconName": "speaker-high", "name": "Hearing-Aid Fitting", "description": "Latest hearing-aid technology in comfortable, custom forms." },
+        { "iconName": "user-circle", "name": "Senior Care Consultations", "description": "Personalised hearing-rehab plans for seniors with ongoing follow-up." },
+        { "iconName": "baby", "name": "Pediatric Hearing Screening", "description": "Early detection of childhood hearing issues to support speech development." },
+        { "iconName": "wrench", "name": "Maintenance & Tuning", "description": "Fast service to keep your hearing aid performing at its best." },
+        { "iconName": "headphones", "name": "Occupational Hearing Protection", "description": "Protective solutions for noise-exposed professions." }
+      ],
+      "faq": [
+        { "question": "How long is a hearing test?", "answer": "Typically 30 to 45 minutes, including several measurements for an accurate diagnosis." },
+        { "question": "Are your hearing aids discreet?", "answer": "We offer a wide range including near-invisible and in-canal models for those who prefer them." },
+        { "question": "Do I need a referral before testing?", "answer": "No — you can book directly via WhatsApp or call us." },
+        { "question": "Do the hearing aids come with a warranty?", "answer": "Yes, all devices include a manufacturer warranty with follow-up from our specialist team." },
+        { "question": "Do you offer in-home consultations for seniors?", "answer": "We offer advisory services for seniors — reach out to our team to arrange the best option." }
+      ],
+      "equipment": []
+    }
+  },
+  "services": {
+    "metaTitle": "Our Medical Services",
+    "metaDescription": "Explore all the medical and cosmetic services at MediCare Plus.",
+    "breadcrumbHome": "Home",
+    "breadcrumbDepartments": "Departments",
+    "hero": {
+      "bookCTA": "Book This Service",
+      "callCTA": "Call to Inquire",
+      "durationLabel": "Session Duration",
+      "priceLabel": "Starting from"
+    },
+    "departmentLabel": "Part of",
+    "benefits": "Benefits",
+    "preparation": "Preparation Before Session",
+    "aftercare": "Aftercare",
+    "description": "Service Details",
+    "relatedDoctors": "Doctors Who Perform This Service",
+    "relatedServices": "Related Services",
+    "faqs": {
+      "title": "Frequently Asked Questions About This Service"
+    },
+    "cta": {
+      "title": "Ready to book your appointment?",
+      "description": "Our team is available to answer your questions and find the right time for you.",
+      "button": "Book on WhatsApp"
+    },
+    "whatsappPrefix": "Hello, I would like to inquire about the service:"
+  },
+  "doctorDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbDoctors": "Doctors",
+    "experienceLabel": "Years of Experience",
+    "languagesLabel": "Languages",
+    "qualificationsLabel": "Qualifications & Certifications",
+    "scheduleLabel": "Working Days",
+    "workingHoursLabel": "Working Hours",
+    "departmentLabel": "Department",
+    "bookButton": "Book with Doctor",
+    "callButton": "Call to Inquire",
+    "bioHeading": "About the Doctor",
+    "days": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    }
+  },
+  "about": {
+    "title": "About MediCare Plus",
+    "subtitle": "Three decades of caring for Riyadh — comprehensive medicine, certified consultants, and a patient experience worth choosing.",
+    "story": {
+      "heading": "Our Story",
+      "body": "Founded in 2010 in Riyadh's Al-Olaya District, MediCare has grown into a trusted home for thousands of families. We continue to invest in our doctors and equipment so every visit pairs human warmth with international standards."
+    },
+    "valuesHeading": "Our Values",
+    "values": [
+      { "title": "Medical Integrity", "description": "Honest treatment plans — no over-prescribing." },
+      { "title": "Certified Expertise", "description": "Consultants holding international and local certifications." },
+      { "title": "Refined Experience", "description": "Quick WhatsApp booking and attentive follow-up." }
+    ],
+    "cta": "Chat with us on WhatsApp"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our patient-care team is available daily to answer questions and book appointments.",
+    "channels": {
+      "whatsappTitle": "WhatsApp",
+      "whatsappDescription": "Fastest way to book — we reply within minutes.",
+      "phoneTitle": "Call Us",
+      "phoneDescription": "Speak directly with the patient-care desk.",
+      "emailTitle": "Email",
+      "emailDescription": "For administrative or partnership inquiries.",
+      "addressTitle": "Address",
+      "addressDescription": "Riyadh — Al-Olaya District, off the main road.",
+      "hoursTitle": "Working Hours"
+    },
+    "cta": "Book your appointment now"
+  },
+  "whyUs": {
+    "eyebrow": "Why MediCare",
+    "title": "A Medical Legacy Spanning Over Three Decades",
+    "description": "Since 2010, we have been providing trusted medical care to thousands of families in Riyadh.",
+    "features": {
+      "experience": { "title": "Unmatched Cumulative Experience", "description": "15 years of continuous medical work" },
+      "staff": { "title": "Certified Medical Staff", "description": "Consultants with international certifications" },
+      "equipment": { "title": "Modern Equipment", "description": "Continuous investment in the latest devices" },
+      "experience2": { "title": "Comfortable Patient Experience", "description": "Quick booking and responsive customer service" }
+    },
+    "visual": {
+      "bigNumber": "35",
+      "experienceLabel": "Years of Experience",
+      "establishedTag": "EST. 2010"
+    },
+    "badges": {
+      "rating": "4.2 / 5 Patient Rating",
+      "certified": "Ministry of Health Certified"
+    },
+    "heritage": {
+      "taglines": [
+        "Still giving back",
+        "Experience that compounds",
+        "Trust renewed daily"
+      ],
+      "milestones": {
+        "2010": "Complex established",
+        "2014": "Facility expansion",
+        "2018": "Audiology launched",
+        "2022": "Surgery unit upgraded",
+        "2026": "15 years of service"
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Patient Stories",
+    "title": "What Our Patients Say",
+    "description": "Real experiences from people who chose MediCare Plus.",
+    "controls": {
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "bookingCta": {
+    "eyebrow": "Book Your Appointment",
+    "title": "A Medical Experience That Starts with <em>One Call</em>",
+    "description": "Our team is ready to answer your inquiry and book your appointment in the right department — within minutes."
+  },
+  "footer": {
+    "description": "An integrated medical complex in Riyadh — Al-Olaya District. We provide comprehensive health services with high quality standards for over three decades.",
+    "featuredDepts": "Featured Departments",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "address": "Riyadh - Al-Olaya District",
+    "rights": "© 2026 MediCare Plus — All rights reserved"
+  }
+}
