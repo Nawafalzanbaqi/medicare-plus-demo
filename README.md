@@ -207,12 +207,10 @@ See [`.env.example`](./.env.example) for the full annotated list.
 
 ## 👋 Contact
 
-Built by **[Your Name]** — [short tagline]
-
-- 🌐 Portfolio: [your-portfolio-url]
-- 💼 LinkedIn: [your-linkedin-url]
-- ✉️ Email: [your-email]
-
+Built by Nawaf Alzanbaqi — Full-Stack Developer
+   🌐 https://nawaf-alzanbaqi.dev
+   💼 https://linkedin.com/in/nawaf-alzanbaqi
+   ✉️ alzanbaqinawaf@gmail.com
 ---
 
 _Built with care in 2026._
